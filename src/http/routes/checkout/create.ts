@@ -17,7 +17,7 @@ export async function create(req: FastifyRequest, reply: FastifyReply) {
 
     const { url } = await createCheckout.execute({ price, productId, userId })
 
-    return reply.status(200).send({ checkout_url: url })
+    return reply.status(201).send({ checkout_url: url })
   } catch (error) {
     if (error instanceof BadRequestError) {
       return reply.status(400).send({ message: error.message })
