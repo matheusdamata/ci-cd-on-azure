@@ -1,6 +1,8 @@
 import fastify from 'fastify'
-import { exampleRoutes } from './http/controllers/example/routes'
+import { checkoutRoutes } from './http/routes/checkout/routes'
 
 export const app = fastify()
 
-app.register(exampleRoutes)
+app.register(checkoutRoutes, {
+  prefix: '/checkout',
+})
