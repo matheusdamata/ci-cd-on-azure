@@ -13,7 +13,7 @@ Para que tenhamos uma redução no tempo de inatividade e possamos validar se es
 - **Node.js**: Para a construção do backend.
 - **Fastify**: Um framework web rápido e de baixa sobrecarga para Node.js.
 - **TypeScript**: Para adicionar tipagem estática ao JavaScript.
-- **Vitest**: Para testes unitários.
+- **Vitest**: Para testes unitários e E2E.
 - **Sinon**: Para mocks e stubs nos testes.
 - **GitHub Actions**: Para automação de CI/CD.
 - **Azure**: Para hospedagem da aplicação.
