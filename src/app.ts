@@ -8,6 +8,8 @@ app.register(checkoutRoutes, {
   prefix: '/checkout',
 })
 
+app.get('/', async (req, reply) => reply.status(200).send())
+
 app.setErrorHandler((err, _, reply) => {
   if (err instanceof ZodError)
     return reply.status(400).send({
