@@ -8,6 +8,8 @@ Por que adotamos essa estratégia?
 
 Para que tenhamos uma redução no tempo de inatividade e possamos validar se está tudo conforme o esperado para produção. Ao confirmar que está tudo correto, realizaremos o swap manualmente para produção.
 
+Extra: Confira o resultado de um teste real de carga com a lib "autocannon" na pasta "_load_testing/bench.txt".
+
 ## Tecnologias Utilizadas
 
 - **Node.js**: Para a construção do backend.
