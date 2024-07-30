@@ -21,7 +21,7 @@ export class PaymentService {
   }
 
   async createPayment(): Promise<createPaymentResponse> {
-    await new Promise((resolve) => setTimeout(resolve, 1000 * 3)) // 3 seconds
+    // await new Promise((resolve) => setTimeout(resolve, 350)) // 3 seconds
 
     return {
       url: 'https://checkout.matheusdamatag.com.br/123',

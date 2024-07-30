@@ -3,7 +3,7 @@ import { env } from './env'
 import os from 'os'
 import cluster from 'cluster'
 
-const runPrimaryProcess = () => {
+const startPrimaryProcess = () => {
   const processCount = os.cpus().length
 
   console.log(`Primary process ${process.pid} is running.`)
@@ -21,7 +21,7 @@ const runPrimaryProcess = () => {
   })
 }
 
-const runWorkerProcess = () => {
+const startWorkerProcess = () => {
   app
     .listen({
       host: '0.0.0.0',
@@ -29,9 +29,9 @@ const runWorkerProcess = () => {
     })
     .then(() => {
       console.log(
-        `Server is running on port 3333. Worker process ${process.pid} is running.`,
+        `Server is running on port ${env.PORT}. Worker process ${process.pid} is running.`,
       )
     })
 }
 
-cluster.isPrimary ? runPrimaryProcess() : runWorkerProcess()
+cluster.isPrimary ? startPrimaryProcess() : startWorkerProcess()
